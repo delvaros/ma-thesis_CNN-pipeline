@@ -1,0 +1,2252 @@
+v1:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize: false
+        center_crop: false
+        random_resized_crop: false
+        random_resized_crop_scale: [0.8, 1.0]
+        resize_and_pad: True  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+        # Color / blur
+        color_jitter: false
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.2
+
+        gaussian_blur: false
+        gaussian_blur_kernel: 9
+        gaussian_blur_sigma: [0.1, 4.0]
+
+        fast_gaussian_blur: false
+        fast_gaussian_blur_kernel: 9
+        fast_gaussian_blur_sigma: 4
+
+        sharpen: false  # lambda sharpen function
+
+        # RandomApply / RandomChoice
+        random_apply_gaussian: false
+        random_apply_p: 0.5
+
+        random_choice: false
+
+        # Normalize
+        normalize: false
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+v2:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize_and_pad: True  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+    val_augmentations:
+        resize_and_pad: True  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+v3:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-6
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize_and_pad: True  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+    val_augmentations:
+        resize_and_pad: True  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+v4:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize_and_pad: False  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+    val_augmentations:
+        resize_and_pad: False  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+v5:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize_and_pad: False  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+    val_augmentations:
+        resize_and_pad: False  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+
+v6:
+    # Variables
+    SIZE: 70
+    LEARNING_RATE: 1e-6
+    NUM_EPOCHS: 40
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+    
+    # untouched
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    
+    # Image augmentations
+    train_augmentations:
+        # Resize options
+        resize_and_pad: False  
+
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+    val_augmentations:
+        resize_and_pad: False  
+        # Geometric augmentations
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+
+
+
+v7:
+    SIZE: 299                    # was 70
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 3
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.5          # was 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        normalize: True                        
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True                   
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v8:
+    SIZE: 299                    # was 70
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 3
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 0.5          # was 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        normalize: True                        
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True                   
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+
+v9:
+    SIZE: 299                    # was 70
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1          # was 0.8
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        normalize: True                        
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True                   
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v10:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v11:
+    SIZE: 224                                  # ResNet-18 native input size
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'resnet18'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 32                             # smaller model = can afford bigger batches
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-5                         # slightly stronger regularization
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]  # ImageNet stats for ResNet
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+
+
+v12:
+    SIZE: 299
+    LEARNING_RATE: 1e-3
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v13:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v14:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v15:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v16:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v17:
+    SIZE: 299
+    LEARNING_RATE: 1e-6
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v18:
+    SIZE: 299
+    LEARNING_RATE: 1e-3
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v19:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 50
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v20:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v21:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v22: #frozen backbone
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v23:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'BITMAP'
+    FREEZE_BACKBONE: False
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: False                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: False
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: False
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v24:
+    SIZE: 224
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'phikon-v2'
+    BBOX_TYPE: 'RAW'
+    FREEZE_BACKBONE: True
+
+    BALANCE_CLASS_WEIGHT: 0         
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2                
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True 
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: true
+        vertical_flip: true
+        color_jitter: true
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: true
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: true
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+
+v25:
+    SIZE: 448                           # CONCH expects 224x224
+    LEARNING_RATE: 1e-4                 # higher LR is fine for frozen backbone
+    NUM_EPOCHS: 80
+    MODEL: 'conch'
+    BBOX_TYPE: 'RAW'
+    FREEZE_BACKBONE: True
+
+    BALANCE_CLASS_WEIGHT: 0
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 64                      # frozen backbone = less GPU memory
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-5
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: true
+        vertical_flip: true
+        color_jitter: true
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: true
+        normalize_mean: [0.48145466, 0.4578275, 0.40821073]
+        normalize_std: [0.26862954, 0.26130258, 0.27577711]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: true
+        normalize_mean: [0.48145466, 0.4578275, 0.40821073]
+        normalize_std: [0.26862954, 0.26130258, 0.27577711]
+
+
+v26:
+    SIZE: 448                           # CONCH expects 224x224
+    LEARNING_RATE: 1e-4                 # higher LR is fine for frozen backbone
+    NUM_EPOCHS: 80
+    MODEL: 'conch'
+    BBOX_TYPE: 'RAW'
+    FREEZE_BACKBONE: False
+
+    BALANCE_CLASS_WEIGHT: 0
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2
+    BATCH_SIZE: 64                      # frozen backbone = less GPU memory
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-5
+    BALANCE_CLASSES: True
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: true
+        vertical_flip: true
+        color_jitter: true
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: true
+        normalize_mean: [0.48145466, 0.4578275, 0.40821073]
+        normalize_std: [0.26862954, 0.26130258, 0.27577711]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: true
+        normalize_mean: [0.48145466, 0.4578275, 0.40821073]
+        normalize_std: [0.26862954, 0.26130258, 0.27577711]
+
+
+v27:
+    SIZE: 224
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'phikon-v2'
+    BBOX_TYPE: 'RAW'
+    FREEZE_BACKBONE: False
+
+    BALANCE_CLASS_WEIGHT: 0         
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.3
+    OUT_BINS: 2                
+    BATCH_SIZE: 64
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True 
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: true
+        vertical_flip: true
+        color_jitter: true
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: true
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: true
+        normalize_mean: [0.485, 0.456, 0.406]
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+
+
+v28:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 96
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v29:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'convnext_tiny'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 96
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                  
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v30:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'efficientnet_b0'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 96
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                  
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v31:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'densenet121'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 96
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                  
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+v32:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 64
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.4
+            saturation: 0.2
+            hue: 0.2
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v33: # With scheduler active - lets see if it improves.
+    SIZE: 224
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'convnext_tiny'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                  
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v34:
+    SIZE: 288
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'efficientnet_b3'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                  
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.485, 0.456, 0.406]      
+        normalize_std: [0.229, 0.224, 0.225]
+
+
+v35:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v36: #Val set balanced 50:50 - not ideal
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v37: #Val set balanced 50:50 - not ideal
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v38: #Val set balanced 50:50 - not ideal
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v39: #Val set balanced 50:50 - not ideal
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v40: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v41: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-5
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.3
+            contrast: 0.3
+            saturation: 0.3
+            hue: 0.15
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v42: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-4
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.4
+            contrast: 0.4
+            saturation: 0.4
+            hue: 0.2
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v43: 
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v44: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v45: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v46: 
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: False
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v47: # new scheduler - warm up
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0      
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: False
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v48: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v49: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v50: # eval on youdens
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v51: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v52: 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v53: 
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1       
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v54:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'                     
+    BALANCE_CLASS_WEIGHT: 1.5            
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.5
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-4                   
+    BALANCE_CLASSES: True
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True
+        color_jitter_params:
+            brightness: 0.25
+            contrast: 0.25
+            saturation: 0.25
+            hue: 0.12
+        random_affine: True               # translation + scale
+        random_perspective: True          # p=0.3
+        random_erasing: True              # p=0.2
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+
+v55:
+    SIZE: 299
+    LEARNING_RATE: 1e-4
+    NUM_EPOCHS: 80
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 1     
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 16
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: False
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+
+v56: # same as p16 v47 - 
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 120
+    MODEL: 'xception'
+    BBOX_TYPE: 'RAW'
+
+    BALANCE_CLASS_WEIGHT: 0    
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: False
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: True
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        color_jitter: True                     
+        color_jitter_params:
+            brightness: 0.2
+            contrast: 0.2
+            saturation: 0.2
+            hue: 0.1
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+v57:
+    SIZE: 299
+    LEARNING_RATE: 1e-5
+    NUM_EPOCHS: 120
+    MODEL: 'xception'
+    BBOX_TYPE: 'BITMAP'
+
+    BALANCE_CLASS_WEIGHT: 0    
+    BALANCE_SAMPLES: 0
+    DROPOUT_RATE: 0.6
+    OUT_BINS: 2
+    BATCH_SIZE: 32
+    TRAIN_SUBSET: 1.0
+    ENSEMBLE: 1
+    WEIGHT_DECAY: 1e-6
+    BALANCE_CLASSES: False
+    FREEZE_BACKBONE: False
+
+    train_augmentations:
+        resize_and_pad: False
+        random_rotation: 180
+        horizontal_flip: True
+        vertical_flip: True
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
+
+    val_augmentations:
+        resize_and_pad: False
+        normalize: True
+        normalize_mean: [0.5, 0.5, 0.5]       
+        normalize_std: [0.5, 0.5, 0.5]
