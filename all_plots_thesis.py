@@ -3,9 +3,8 @@ Thesis plots, if they can be of use to somebody...
 Includes custom color palette.
 """
 
-# ============================================================
 # Imports
-# ============================================================
+
 import time
 
 start_time = time.perf_counter()
@@ -47,9 +46,8 @@ from tbparse import SummaryReader
 from helper_scripts.compressed_sampler import SampleManager
 import score_analysis as sa
 
-# ============================================================
 # Output directory & save helper
-# ============================================================
+
 OUT_DIR = Path("thesis_plots")
 OUT_DIR.mkdir(exist_ok=True)
 
@@ -59,9 +57,8 @@ def save_svg(fig, name):
     fig.savefig(OUT_DIR / f"{name}.svg", format="svg", bbox_inches=None)
 
 
-# ============================================================
 # Color palette & rcParams (single source of truth)
-# ============================================================
+
 LABEL = {
     "negative": "#68A6F2",
     "positive": "#C92B45",
@@ -140,17 +137,15 @@ FONT_ANNOT = 7  # bracket text, effect-size labels
 FONT_CELL = 9  # heatmap cell annotations
 
 
-# ============================================================
 # Constants
-# ============================================================
+
 DAB_COLS = ["dab_mean", "dab_median", "dab_max", "dab_p90", "dab_positive_fraction"]
 MORPH_COLS = ["area", "convexity", "aspect"]
 SCORE_COLS = ["mean_p15", "mean_p16", "mean_p21"]
 
 
-# ============================================================
 # Data loading
-# ============================================================
+
 # Samplers (full IHC datasets, per marker)
 p15_sampler = SampleManager(Path("/allsamplers_p15"))
 p15_sampler.load_samples()
@@ -192,9 +187,9 @@ log_dirs = {
 tb_dfs = {marker: SummaryReader(path).scalars for marker, path in log_dirs.items()}
 
 
-# ============================================================
 # Build per-nucleus samples dataframes from samplers
-# ============================================================
+
+
 def _build_samples_df(sampler):
     keys, dabs, labels = [], [], []
     for i, slide in enumerate(sampler.sample_xs):
@@ -292,9 +287,9 @@ sources = [
 morph_dfs = {"p15": morph_df_p15, "p16": morph_df_p16, "p21": morph_df_p21}
 
 
-# ============================================================
 # Helper: build tidy dataframe (per-nucleus, with morphometrics)
-# ============================================================
+
+
 def build_tidy(sampler, morph_df, marker, morph_cols=("area", "convexity", "aspect")):
     rows = []
     for cells, keys in zip(sampler.sample_xs, sampler.sample_keys):
@@ -322,9 +317,9 @@ tidy = pd.concat(
 )
 
 
-# ============================================================
 # Effect size helpers
-# ============================================================
+
+
 def cliffs_delta(x, y):
     u, p = mannwhitneyu(x, y, alternative="two-sided")
     delta = 2 * u / (len(x) * len(y)) - 1
@@ -342,9 +337,9 @@ def delta_label(delta):
     return "large"
 
 
-# ============================================================
 # Section 1 — Dataset description
-# ============================================================
+
+
 def plot_nuclei_per_slide(tidy, markers=("p15", "p16", "p21"), savename=None):
     fig, axes = plt.subplots(
         2,
@@ -613,9 +608,9 @@ def plot_sampler_triplets(
     slide.close()
 
 
-# ============================================================
 # Section 2 — Morphometric analyses
-# ============================================================
+
+
 def plot_morph_comparison(
     tidy,
     markers=("p15", "p16", "p21"),
@@ -904,9 +899,9 @@ def plot_pca_morphometrics(
     plt.show()
 
 
-# ============================================================
 # Section 3 — Training & prediction
-# ============================================================
+
+
 def plot_training_curves(
     tb_dfs,
     tag_map,
@@ -1101,9 +1096,9 @@ def plot_slide_level(
     plt.show()
 
 
-# ============================================================
 # Section 4 — KomenTissueBank prediction
-# ============================================================
+
+
 def plot_cohort_composition_ktb(
     df,
     savename=None,
@@ -1549,9 +1544,8 @@ def plot_supervisor_corr_lollipop(
     plt.show()
 
 
-# ============================================================
 # Plot generation calls
-# ============================================================
+
 if __name__ == "__main__":
 
     # -------- Figure 1: Dataset description --------
